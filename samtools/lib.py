@@ -48,7 +48,7 @@ def clean_data(data):
     return data
 
 def say_hi():
-    print("Hello, World")
+    print("Hello, World !")
 
 if __name__ == '__main__':
     # For introspections purpose to quickly get this functions on ipython
