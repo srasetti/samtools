@@ -50,10 +50,19 @@ def clean_data(data):
 def say_hi():
     print("Hello, World !")
 
+def is_palyndrome(text):
+    if type(text) != "str":
+        text = str(text)
+    if text.lower() == text[::-1].lower():
+        return True
+    else :
+        return False
+
 if __name__ == '__main__':
     # For introspections purpose to quickly get this functions on ipython
     import samtools
-    folder_source, _ = split(samtools.__file__)
-    df = pd.read_csv('{}/data/data.csv.gz'.format(folder_source))
-    clean_data = clean_data(df)
-    print(' dataframe cleaned')
+    # folder_source, _ = split(samtools.__file__)
+    # df = pd.read_csv('{}/data/data.csv.gz'.format(folder_source))
+    # clean_data = clean_data(df)
+    # print(' dataframe cleaned')
+    print(is_palyndrome(12321))

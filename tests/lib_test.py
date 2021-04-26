@@ -5,7 +5,7 @@ import os
 import samtools
 import pandas as pd
 # Import from our lib
-from samtools.lib import clean_data
+from samtools.lib import clean_data, is_palyndrome
 import pytest
 
 
@@ -17,3 +17,7 @@ def test_clean_data():
     assert df.shape == (999, 142)
     out = clean_data(df)
     assert out.shape == (985, 119)
+
+def test_is_palyndrome():
+    assert is_palyndrome("Bob") == True
+    assert is_palyndrome("12345") == False
