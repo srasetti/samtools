@@ -50,7 +50,7 @@ def clean_data(data):
 def say_hi():
     print("Hello, World !")
 
-def is_palyndrome(text):
+def is_palindrome(text):
     if type(text) != "str":
         text = str(text)
     if text.lower() == text[::-1].lower():
